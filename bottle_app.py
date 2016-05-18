@@ -3,7 +3,7 @@ import requests
 import json
 import string
 
-api_key = 'AIzaSyAq-zrS-L7F0X-yF4zxDAu8nqY3jwIPk8A'
+from api_key_config import g_api_key as api_key
 
 origin_lat = '-24.1163612'
 origin_long = '-46.6938933'

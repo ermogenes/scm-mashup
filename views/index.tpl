@@ -179,19 +179,6 @@
         -->
 
 
-
-
-        <!-- Google API key  AIzaSyBhtd-yJe2grMYczNLGBjTGkPUKhzzf7gU
-
-        https://maps.googleapis.com/maps/api/distancematrix/json?origins=-24.1163612,-46.6938933&destinations=-22.9105753,-43.1891424&key=AIzaSyAq-zrS-L7F0X-yF4zxDAu8nqY3jwIPk8A
-
-        -->
-
-
-
-
-
-
         <!-- Include the Google Maps API library - required for embedding maps -->
 
         <script src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
@@ -228,12 +215,6 @@
         google.maps.event.addDomListener(window, 'load', showGoogleMaps);
 
         </script>
-
-
-
-
-
-
 
 
     </body>
