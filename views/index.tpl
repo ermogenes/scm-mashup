@@ -52,8 +52,8 @@
               position: relative;
               z-index: 2;
               /*width: 300px;*/
-              margin: 15px auto 0;
-              padding: 0px 25px 0px 25px;
+              margin: 10px auto 0;
+              padding: 0px 20px 0px 20px;
               height: auto;
               color: white;
             }
@@ -69,6 +69,8 @@
               color: black;
               opacity: .95;
               border-radius: 10px;
+              overflow: scroll;
+              height: 200px;
             }
 
             #map-results{
@@ -79,6 +81,7 @@
             .caret-button{
                 float:right;
                 top:15px;
+                display: none;
             }
 
         </style>
@@ -126,7 +129,7 @@
             <div class="collapse in" id="collapse-results">
 
                 <table class="table table-condensed">
-                    <thead><tr><th>Imagem</th><th>Descrição</th><th>Preço</th><th>Distância</th></tr></thead>
+                    <thead><tr><th width="1">Imagem</th><th width="50%">Descrição</th><th>Preço</th><th>Qualificação</th><th>Distância</th><th>Frete Grátis</th></tr></thead>
                     <tbody>
                         %for produto in rows:
                           <tr>
@@ -136,9 +139,10 @@
                             <!--
                             <td>{{produto['latitude']}}</td>
                             <td>{{produto['longitude']}}</td>
-                            <td>{{produto['distance']}}</td>
                             -->
+                            <td>{{produto['listing_type_id']}}</td>
                             <td>{{produto['distance_human']}}</td>
+                            <td>{{produto['free_shipping']}}</td>
                           %end
                           </tr>
                         %end

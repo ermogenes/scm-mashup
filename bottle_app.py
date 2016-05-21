@@ -57,17 +57,19 @@ def mlb_home():
                     'title':i['title'],
                     'permalink':i['permalink'],
                     'price':i['price'],
+                    'listing_type_id':i['listing_type_id'],
                     'latitude':i['seller_address']['latitude'],
                     'longitude':i['seller_address']['longitude'],
                     'distance_human':d['rows'][0]['elements'][0]['distance']['text'],
                     'distance':d['rows'][0]['elements'][0]['distance']['value'],
+                    'free_shipping': i['shipping']['free_shipping'],
                     'index':lbl,
                     'marker':'&markers=size:{}%7Ccolor:{}%7Clabel:{}%7C{},{}'.format('mid', 'blue', lbl, dest_lat, dest_long),
                 }]
             except:
                 pass
 
-        linhas = sorted(resultados, key=lambda item: item['distance'])[0:2]
+        linhas = sorted(resultados, key=lambda item: item['distance'])[0:15]
 
         for l in linhas:
             map_url += l['marker']
